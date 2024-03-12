@@ -1,0 +1,61 @@
+html, body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #cccccc;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: 'h h' 'm a' 'f f';
+
+    /* 
+        grid-template-areas pode ser configurado baseado na quantidade de colunas e linhas disponiveis
+        grid-row-gap: 20px; Espacamento entre linhas
+        grid-column-gap: 50px; Espacamento entre colunas
+
+        quando usa o display grid, o css tem linhas e colunas virtuais de acordo com a quantidade de linhas e colunas
+    */
+}
+
+header{
+    background: #44123d;
+    /* height: 100px; */
+
+    grid-area: h;
+    /* grid-column: 1/3;
+    grid-row: 3/4; */
+    
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+
+main{
+    background: darkblue;
+    /* height: 100px; */
+
+    grid-area: m;
+/* 
+    grid-column-start: 1;
+    grid-column-end: 2; */
+}
+
+aside{
+    background: brown;
+    /* height: 100px; */
+    
+    grid-area: a;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
+
+footer{
+    background: chartreuse;
+    /* height: 100px; */
+    
+    grid-area: f;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
